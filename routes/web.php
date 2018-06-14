@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'redirectLogin@index');
+
+// route to show the login form
+Route::get('/login', array('as' => 'login','uses' => 'HomeController@showLogin'));
+// route to process the form
+Route::post('/login', array('uses' => 'HomeController@doLogin'));
+
+Route::get('/welcome', ['as' => 'welcome', 'middleware' => 'isLoggedin',  function(){
+  return view('welcome');
+}]);
+
+Route::get('logout', ['uses' => 'HomeController@doLogout']);

@@ -60,7 +60,7 @@ public function doLogin()
 
 14. logout
 
-''' html
+''' HTML
 <!-- LOGOUT BUTTON -->
 <a href="{{ URL::to('logout') }}">Logout</a>
 '''

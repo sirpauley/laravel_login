@@ -39,7 +39,7 @@ $this->call('UserTableSeeder');
 
 11. php artisan make:controller HomeController
 
-''' php
+'''php
 public function showLogin()
 {
     // show the form
@@ -47,7 +47,7 @@ public function showLogin()
 }
 '''
 
-''' php
+'''php
 public function doLogin()
 {
 // process the form
@@ -60,7 +60,7 @@ public function doLogin()
 
 14. logout
 
-''' HTML
+'''HTML
 <!-- LOGOUT BUTTON -->
 <a href="{{ URL::to('logout') }}">Logout</a>
 '''

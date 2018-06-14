@@ -29,10 +29,12 @@ public function run()
 '''
 
 9. Add line to DatabaseSeeder in the run function
+
 '''
 // app/database/seeds/DatabaseSeeder.php
 $this->call('UserTableSeeder');
 '''
+
 10. php artisan db:seed
 
 11. php artisan make:controller HomeController
@@ -43,9 +45,24 @@ public function showLogin()
     // show the form
     return View::make('login');
 }
+'''
 
+''' php
 public function doLogin()
 {
 // process the form
 }
 '''
+
+12. create login.blade.php (form)
+
+13. validate form
+
+14. logout
+
+''' php
+<!-- LOGOUT BUTTON -->
+<a href="{{ URL::to('logout') }}">Logout</a>
+'''
+
+15. Middleware for logged in test

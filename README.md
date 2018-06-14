@@ -9,8 +9,8 @@
 6. setup table coloms in migration folder
 7. php artisan migrate
 8. Create a seed and add code below; php artisan make:seeder UserTableSeeder
+
 ''' php
-<?php
 
 class UserTableSeeder extends Seeder
 {

@@ -10,7 +10,7 @@
 7. php artisan migrate
 8. Create a seed and add code below; php artisan make:seeder UserTableSeeder
 
-''' php
+```php
 
 class UserTableSeeder extends Seeder
 {
@@ -26,14 +26,14 @@ public function run()
 }
 
 }
-'''
+```
 
 9. Add line to DatabaseSeeder in the run function
 
-'''
+```php
 // app/database/seeds/DatabaseSeeder.php
 $this->call('UserTableSeeder');
-'''
+```
 
 10. php artisan db:seed
 

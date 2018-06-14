@@ -39,20 +39,20 @@ $this->call('UserTableSeeder');
 
 11. php artisan make:controller HomeController
 
-'''php
+```php
 public function showLogin()
 {
     // show the form
     return View::make('login');
 }
-'''
+```
 
-'''php
+```php
 public function doLogin()
 {
 // process the form
 }
-'''
+```
 
 12. create login.blade.php (form)
 
@@ -60,9 +60,9 @@ public function doLogin()
 
 14. logout
 
-'''HTML
+```HTML
 <!-- LOGOUT BUTTON -->
 <a href="{{ URL::to('logout') }}">Logout</a>
-'''
+```
 
 15. Middleware for logged in test

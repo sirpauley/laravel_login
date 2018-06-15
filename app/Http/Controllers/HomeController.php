@@ -36,7 +36,7 @@ class HomeController extends Controller
       //echo 'SUCCESS!';
       return redirect()->route('welcome');
     }else{
-      return redirect()->route('login');
+      return back()->withErrors(['email' => 'Invalid login!'])->withInput(Input::all());//redirect()->route('login');
     }//else Auth
 
 

@@ -13,8 +13,15 @@
 
   <!-- if there are login errors, show them here -->
   <div class="col">
-      {{ $errors->first('email') }}
-      {{ $errors->first('password') }}
+    @if (!$errors->isEmpty())
+
+      <div class="alert bg-danger" role="alert"><em class="fa fa-minus-circle mr-2"></em>
+        {{ $errors->first('email') }}
+        {{ $errors->first('password') }}
+      <a href="#" class="float-right"><em class="fa fa-remove"></em></a></div>
+
+      @endif
+
   </div>
 </div>
 

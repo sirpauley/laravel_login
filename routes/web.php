@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', 'redirectLogin@index');
+//Route::get('/', 'redirectLogin@index');
+Route::get('/', array('uses' => 'HomeController@showLogin'));
 
 // route to show the login form
 Route::get('/login', array('as' => 'login','uses' => 'HomeController@showLogin'));

@@ -16,10 +16,10 @@ class IsloggedinMiddleware
      */
     public function handle($request, Closure $next)
     {
-      if(empty(Auth::user()->email)){
+      if(empty(Auth::user()->username)){
         return redirect()->route('login');
       }else{
         return $next($request);
       }
-    }
+    }//handle
 }
